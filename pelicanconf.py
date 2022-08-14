@@ -19,11 +19,17 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = ()
+LINKS = (('sponsor', 'https://sponsor.frearb.com'),)
 
 # Social widget
-SOCIAL = (('github', 'http://github.com/ametaireau'),
-          ('Another social link', '#'),)
+SOCIAL = (('github', 'https://github.com/frearb'),)
+
+ICONS = {
+    'sponsor': 'fas fa-heart-square',
+    'github': 'fab fa-github-square',
+    'facebook': 'fab fa-facebook-square',
+    'twitter': 'fab fa-twitter-square',
+    }
 
 DEFAULT_PAGINATION = False
 
@@ -34,10 +40,18 @@ ARCHIVES_URL = 'archives.html'
 
 STATIC_PATHS = [
     'images',
-    'static',
+    'extra/CNAME',
+    'extra/robots.txt',
+    'static/custom.css'
     ]
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'},
+    'extra/robots.txt': {'path': 'robots.txt'}
+    }
 
 TAGLINE = '信息浪潮中的一座孤岛'
+
+DISQUS_SITENAME = 'frearb'
 
 # theme setting
 USER_LOGO_URL = '/images/logo96.png'
